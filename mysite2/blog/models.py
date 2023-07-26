@@ -11,8 +11,8 @@ class Post(models.Model):
         PUBLISHED = 'PB', 'Published'
 
     title = models.TextField(max_length=100)
-    slug = models.SlugField(allow_unicode=True)
-    autor = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    # slug = models.SlugField(allow_unicode=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     body = models.TextField(max_length=300)
     publish = models.DateTimeField(default=timezone.now())
     created = models.DateTimeField(auto_now_add=True)

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Post Detail{% endblock %}
+
+{% block content %}
+<h1>PostDetail {{ post.title }}</h1>
+
+<p>
+    {{ post.body|linebreaks }}
+</p>
+{% endblock content %}
