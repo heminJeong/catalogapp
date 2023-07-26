@@ -5,7 +5,7 @@
 {% block content %}
 <h1>PostList</h1>
 
-<div class="container">
+<div class="container-fluid">
 {% for post in posts %}
     <div class="card mb-3" style="width: 18rem;">
         <div class="card-body">
@@ -22,5 +22,6 @@
 {% endfor %}
 </div>
 
+{% include "pagination.html" with page=page_obj %}
 
 {% endblock content %}
