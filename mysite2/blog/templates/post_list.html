@@ -5,12 +5,22 @@
 {% block content %}
 <h1>PostList</h1>
 
+<div class="container">
 {% for post in posts %}
-    <div style="padding-bottom: 5px;">
-        <a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a><p>{{ post.publish }}</p>
-        <p>{{ post.author }}</p>
-        <p>{{ post.body }}</p>
+    <div class="card mb-3" style="width: 18rem;">
+        <div class="card-body">
+            <div class="card-title">
+                <a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a><p>{{ post.publish }}</p>
+            </div>
+            <div class="card-text">
+                {{ post.body }}
+            </div>
+        </div>
+
+        <p></p>
     </div>
 {% endfor %}
+</div>
+
 
 {% endblock content %}
