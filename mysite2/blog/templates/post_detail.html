@@ -10,4 +10,6 @@
     </p>
 <a href="{{ post.get_absolute_url }}/share ">share</a>
 </div>
+
+{% include "comment_form.html" with form=form %}
 {% endblock content %}

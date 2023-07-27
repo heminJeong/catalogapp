@@ -6,6 +6,8 @@ from .models import *
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'author', 'body', 'publish', 'created', 'updated', 'status']
 
+@admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ['post', 'name', 'email', 'body', 'created', 'updated', 'active']
-    list_filter = ['active, created, updated']
+    list_display = ['post', 'name', 'email', 'body', 'active']
+    list_filter = ['active', 'created', 'updated']
+    search_fields = ['name', 'email', 'body']

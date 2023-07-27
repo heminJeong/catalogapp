@@ -1,0 +1,7 @@
+
+
+<form action="{{ post_comment.get_absolute_url }}">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" class="btn btn-primary"></p>
+</form>
