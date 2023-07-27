@@ -2,9 +2,12 @@
 {% block title %}Post Detail{% endblock %}
 
 {% block content %}
-<h1>PostDetail {{ post.title }}</h1>
+<div class="container-fluid">
+    <h1>PostDetail {{ post.title }}</h1>
 
-<p>
-    {{ post.body|linebreaks }}
-</p>
+    <p>
+        {{ post.body|linebreaks }}
+    </p>
+<a href="{{ post.get_absolute_url }}/share ">share</a>
+</div>
 {% endblock content %}

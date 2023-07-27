@@ -10,7 +10,7 @@
     <div class="card mb-3" style="width: 18rem;">
         <div class="card-body">
             <div class="card-title">
-                <a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a><p>{{ post.publish }}</p>
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a><p>{{ post.publish }}</p>
             </div>
             <div class="card-text">
                 {{ post.body }}
